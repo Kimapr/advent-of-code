@@ -101,7 +101,6 @@ for t in pairs(seeds) do
 							table.insert(ranges,ir-1+k,v)
 							print("","","rr",v[1],v[2])
 						end
-						break
 					else
 						print("","","dont map "..a..".."..b.." in "..sa..".."..sb.." off "..off)
 					end
