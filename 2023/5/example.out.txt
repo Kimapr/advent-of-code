@@ -1,0 +1,235 @@
+"seed-to-soil map:"
+map from seed to soil
+"50 98 2"
+98	99	-48
+"52 50 48"
+50	97	2
+"soil-to-fertilizer map:"
+map from soil to fertilizer
+"0 15 37"
+15	51	-15
+"37 52 2"
+52	53	-15
+"39 0 15"
+0	14	39
+"fertilizer-to-water map:"
+map from fertilizer to water
+"49 53 8"
+53	60	-4
+"0 11 42"
+11	52	-11
+"42 0 7"
+0	6	42
+"57 7 4"
+7	10	50
+"water-to-light map:"
+map from water to light
+"88 18 7"
+18	24	70
+"18 25 70"
+25	94	-7
+"light-to-temperature map:"
+map from light to temperature
+"45 77 23"
+77	99	-32
+"81 45 19"
+45	63	36
+"68 64 13"
+64	76	4
+"temperature-to-humidity map:"
+map from temperature to humidity
+"0 69 1"
+69	69	-69
+"1 0 69"
+0	68	1
+"humidity-to-location map:"
+map from humidity to location
+"60 56 37"
+56	92	4
+"56 93 4"
+93	96	-37
+
+MAPPING SEED 79 to 92
+	mapping seed to soil
+		79	92
+	I
+		dont map 79..92 in 98..99 off -48
+		map 79..92 in 50..97 off 2
+		rr	81	94
+	O
+		81	94	true
+
+	mapping soil to fertilizer
+		81	94
+	I
+		dont map 81..94 in 15..51 off -15
+		dont map 81..94 in 52..53 off -15
+		dont map 81..94 in 0..14 off 39
+	O
+		81	94	nil
+
+	mapping fertilizer to water
+		81	94
+	I
+		dont map 81..94 in 53..60 off -4
+		dont map 81..94 in 11..52 off -11
+		dont map 81..94 in 0..6 off 42
+		dont map 81..94 in 7..10 off 50
+	O
+		81	94	nil
+
+	mapping water to light
+		81	94
+	I
+		dont map 81..94 in 18..24 off 70
+		map 81..94 in 25..94 off -7
+		rr	74	87
+	O
+		74	87	true
+
+	mapping light to temperature
+		74	87
+	I
+		map 74..87 in 77..99 off -32
+		rr++A
+		rr	74	76
+		rr	45	55
+		dont map 74..76 in 45..63 off 36
+		map 74..76 in 64..76 off 4
+		rr	78	80
+	O
+		78	80	true
+		45	55	true
+
+	mapping temperature to humidity
+		78	80
+		45	55
+	I
+		dont map 78..80 in 69..69 off -69
+		dont map 45..55 in 69..69 off -69
+		dont map 78..80 in 0..68 off 1
+		map 45..55 in 0..68 off 1
+		rr	46	56
+	O
+		78	80	nil
+		46	56	true
+
+	mapping humidity to location
+		78	80
+		46	56
+	I
+		map 78..80 in 56..92 off 4
+		rr	82	84
+		dont map 46..56 in 93..96 off -37
+	O
+		82	84	true
+		46	56	nil
+
+
+MAPPING SEED 55 to 67
+	mapping seed to soil
+		55	67
+	I
+		dont map 55..67 in 98..99 off -48
+		map 55..67 in 50..97 off 2
+		rr	57	69
+	O
+		57	69	true
+
+	mapping soil to fertilizer
+		57	69
+	I
+		dont map 57..69 in 15..51 off -15
+		dont map 57..69 in 52..53 off -15
+		dont map 57..69 in 0..14 off 39
+	O
+		57	69	nil
+
+	mapping fertilizer to water
+		57	69
+	I
+		map 57..69 in 53..60 off -4
+		rr++B
+		rr	53	56
+		rr	61	69
+		dont map 61..69 in 11..52 off -11
+		dont map 61..69 in 0..6 off 42
+		dont map 61..69 in 7..10 off 50
+	O
+		53	56	true
+		61	69	nil
+
+	mapping water to light
+		53	56
+		61	69
+	I
+		dont map 53..56 in 18..24 off 70
+		dont map 61..69 in 18..24 off 70
+		map 53..56 in 25..94 off -7
+		rr	46	49
+	O
+		46	49	true
+		61	69	nil
+
+	mapping light to temperature
+		46	49
+		61	69
+	I
+		dont map 46..49 in 77..99 off -32
+		dont map 61..69 in 77..99 off -32
+		map 46..49 in 45..63 off 36
+		rr	82	85
+		map 61..69 in 64..76 off 4
+		rr++A
+		rr	61	63
+		rr	68	73
+	O
+		82	85	true
+		61	63	nil
+		68	73	true
+
+	mapping temperature to humidity
+		82	85
+		61	63
+		68	73
+	I
+		dont map 82..85 in 69..69 off -69
+		dont map 61..63 in 69..69 off -69
+		map 68..73 in 69..69 off -69
+		rr++A
+		rr++B
+		rr	68	68
+		rr	0	0
+		rr	70	73
+		dont map 82..85 in 0..68 off 1
+		map 61..63 in 0..68 off 1
+		rr	62	64
+	O
+		82	85	nil
+		62	64	true
+		68	68	nil
+		0	0	true
+		70	73	nil
+
+	mapping humidity to location
+		82	85
+		62	64
+		68	68
+		0	0
+		70	73
+	I
+		map 82..85 in 56..92 off 4
+		rr	86	89
+		dont map 62..64 in 93..96 off -37
+		dont map 68..68 in 93..96 off -37
+		dont map 0..0 in 93..96 off -37
+		dont map 70..73 in 93..96 off -37
+	O
+		86	89	true
+		62	64	nil
+		68	68	nil
+		0	0	nil
+		70	73	nil
+
+
+0
